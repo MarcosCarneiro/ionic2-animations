@@ -8,12 +8,12 @@
 
 <ion-content>
 
-  <button ion-button color="light" (click)="toogleFlip()">Flip!</button>
+  <button [@flip]="flipState" ion-button color="light" (click)="toogleFlip()">Flip!</button>
 
-  <button ion-button color="light" (click)="toogleFlyInOut()">Fly Out!</button>
+  <button [@flyInOut]="flyInOutState" ion-button color="light" (click)="toogleFlyInOut()">Fly Out!</button>
 
-  <button ion-button color="light" (click)="toogleFade()">Fade!</button>
+  <button [@fade]="@fadeState" ion-button color="light" (click)="toogleFade()">Fade!</button>
 
-  <button ion-button color="light" (click)="toogleBounce()">Bounce!</button>
+  <button [@bounce]="bounceState" ion-button color="light" (click)="toogleBounce()">Bounce!</button>
 
 </ion-content>

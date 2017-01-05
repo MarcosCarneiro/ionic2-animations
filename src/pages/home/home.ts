@@ -53,8 +53,33 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
+  flipState: String = 'notFlipped';
+  flyInOutState: String = 'in';
+  fadeState: String = 'visible';
+  bounceState: String = 'noBounce';
+
   constructor(public navCtrl: NavController) {
 
+  }
+
+  toogleFlip(){
+    this.flipState = (this.flipState == 'notFlipped') ? 'flipped' : 'notFlipped';
+  }
+
+  toogleFlyInOut(){
+    this.flyInOutState = 'out';
+
+    setInterval(() => {
+      this.flyInOutState = 'in';
+    }, 2000);
+  }
+
+  toogleFade(){
+    this.fadeState = (this.fadeState == 'visible') ? 'invisible' : 'visible';
+  }
+
+  toogleBounce(){
+    this.bounceState = (this.bounceState == 'noBounce') ? 'bouncing' : 'noBounce';
   }
 
 }
